@@ -91,6 +91,20 @@ void fl::ui::PracticeUI::update(StageScene* stageScene)
 
             if (isTriggerRight() && saved)
                 loadPosition(*player);
+
+            if (isTriggerUp()) 
+            {
+                if (killMarioDpadUp) 
+                {
+                    Game::instance().killMario();
+                } 
+                else if (reloadSceneDpadUp) 
+                {
+                    const char* entry = stageScene->mHolder->mGameDataFile->mStartId.cstr();
+                    ChangeStageInfo info = ChangeStageInfo(stageScene->mHolder, entry, stageScene->mHolder->getCurrentStageName(), false, -1, {0});
+                    stageScene->mHolder->changeNextStage(&info, 0);
+                }
+            }
         }
     }
 
