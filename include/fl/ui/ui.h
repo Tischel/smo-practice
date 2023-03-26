@@ -59,15 +59,15 @@ namespace ui {
         }
         inline void addLine() { curMaxLine++; }
 
-        bool teleportEnabled = false;
-        bool shineRefresh = false;
-        bool gotShineRefresh = false;
-        bool alwaysWarp = false;
-        bool disableAutoSave = false;
+        bool teleportEnabled = true;
+        bool shineRefresh = true;
+        bool gotShineRefresh = true;
+        bool alwaysWarp = true;
+        bool disableAutoSave = true;
         bool skipBowser = false;
         bool disablePuppet = false;
         bool killMarioDpadUp = false;
-        bool reloadSceneDpadUp = false;
+        bool reloadSceneDpadUp = true;
 
         bool isModeDiverOrJungleGymRom = false;
         bool isModeDiverRom = false;
